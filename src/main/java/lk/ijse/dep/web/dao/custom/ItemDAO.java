@@ -6,3 +6,4 @@ import lk.ijse.dep.web.entity.Item;
 public interface ItemDAO extends CrudDAO<Item, String> {
 
 }
+
