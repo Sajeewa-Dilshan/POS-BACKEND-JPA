@@ -20,7 +20,7 @@ public class Item implements SuperEntity{
 
     @Id
     private String code;
-    private String descipriton;
+    private String description;
     @Column(name = "unit_price")
     private BigDecimal unitPrice;
     @Column(name = "qty_on_hand")

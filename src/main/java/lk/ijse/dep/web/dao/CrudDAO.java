@@ -2,10 +2,10 @@ package lk.ijse.dep.web.dao;
 
 import lk.ijse.dep.web.entity.SuperEntity;
 
-import java.io.Serializable;
+import java.sql.Connection;
 import java.util.List;
 
-public interface CrudDAO<T extends SuperEntity, K extends Serializable> {
+public interface CrudDAO<T extends SuperEntity, K> extends SuperDAO {
 
     public void save(T entity) throws Exception;
 
@@ -17,3 +17,4 @@ public interface CrudDAO<T extends SuperEntity, K extends Serializable> {
 
     public T get(K key) throws Exception;
 }
+
