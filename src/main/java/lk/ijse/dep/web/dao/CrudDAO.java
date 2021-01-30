@@ -5,7 +5,7 @@ import lk.ijse.dep.web.entity.SuperEntity;
 import java.io.Serializable;
 import java.util.List;
 
-public interface CrudDAO<T extends SuperEntity, K extends Serializable> extends SuperDAO {
+public interface CrudDAO<T extends SuperEntity, K extends Serializable> {
 
     public void save(T entity) throws Exception;
 

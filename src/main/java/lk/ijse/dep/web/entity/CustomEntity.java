@@ -3,7 +3,7 @@ package lk.ijse.dep.web.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class CustomeEntity implements SuperEntity{
+public class CustomEntity implements SuperEntity{
 
     private String customerId;
     private String customerName;
@@ -11,10 +11,10 @@ public class CustomeEntity implements SuperEntity{
     private Date orderDate;
     private BigDecimal orderTotal;
 
-    public CustomeEntity() {
+    public CustomEntity() {
     }
 
-    public CustomeEntity(String customerId, String customerName, String orderId, Date orderDate, BigDecimal orderTotal) {
+    public CustomEntity(String customerId, String customerName, String orderId, Date orderDate, BigDecimal orderTotal) {
         this.setCustomerId(customerId);
         this.setCustomerName(customerName);
         this.setOrderId(orderId);

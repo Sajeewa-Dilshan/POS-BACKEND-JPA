@@ -1,7 +1,5 @@
 package lk.ijse.dep.web.dao;
 
-import lk.ijse.dep.web.dao.custom.impl.*;
-
 public class DAOFactory {
 
     private static DAOFactory daoFactory;
@@ -14,7 +12,7 @@ public class DAOFactory {
         return (daoFactory == null) ? (daoFactory = new DAOFactory()) : daoFactory;
     }
 
-    public <T extends SuperDAO> T getDAO(DAOTypes daoTypes) {
+    public <T> T getDAO(DAOTypes daoTypes) {
         switch (daoTypes) {
             case CUSTOMER:
                 return (T) new CustomerDAOImpl();
