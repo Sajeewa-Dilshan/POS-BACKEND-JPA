@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
+
 @WebServlet(urlPatterns = "/api/v1/customers/*")
 public class CustomerServlet extends HttpServlet {
 

@@ -5,6 +5,8 @@ import lk.ijse.dep.web.entity.SuperEntity;
 import java.sql.Connection;
 import java.util.List;
 
+
+
 public interface CrudDAO<T extends SuperEntity, K> extends SuperDAO {
 
     public void save(T entity) throws Exception;
