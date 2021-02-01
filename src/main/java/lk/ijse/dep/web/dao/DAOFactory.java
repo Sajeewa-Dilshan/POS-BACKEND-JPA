@@ -1,5 +1,7 @@
 package lk.ijse.dep.web.dao;
 
+import lk.ijse.dep.web.dao.custom.impl.*;
+
 public class DAOFactory {
 
     private static DAOFactory daoFactory;

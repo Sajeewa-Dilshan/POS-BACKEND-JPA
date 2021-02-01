@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="dep-06">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>lk.ijse.dep.web.entity.CustomEntity</class>
+        <class>lk.ijse.dep.web.entity.Customer</class>
+        <class>lk.ijse.dep.web.entity.Item</class>
+        <class>lk.ijse.dep.web.entity.Order</class>
+        <class>lk.ijse.dep.web.entity.OrderDetail</class>
+
+
+    </persistence-unit>
+</persistence>

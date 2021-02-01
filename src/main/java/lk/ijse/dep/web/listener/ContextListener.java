@@ -1,5 +1,6 @@
 package lk.ijse.dep.web.listener;
 
+import lk.ijse.dep.web.util.JPAUtil;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.slf4j.LoggerFactory;
 
@@ -29,17 +30,9 @@ public class ContextListener implements ServletContextListener {
         Properties prop = new Properties();
         System.out.println("Connection pool is being initialized...!");
         try {
-            prop.load(this.getClass().getResourceAsStream("/application.properties"));
-            BasicDataSource bds = new BasicDataSource();
-            bds.setUsername(prop.getProperty("dbcp.connection.username"));
-            bds.setPassword(prop.getProperty("dbcp.connection.password"));
-            bds.setUrl(prop.getProperty("dbcp.connection.url"));
-            bds.setDriverClassName(prop.getProperty("dbcp.connection.driver_class"));
-            bds.setInitialSize(5);
-            prop.put("hibernate.connection.datasource",bds);
-            sce.getServletContext()
-                    .setAttribute("emf",
-                            Persistence.createEntityManagerFactory("dep-6", prop));
+
+            EntityManagerFactory entityManagerFactory= JPAUtil.getEntityManagerFactory();
+            sce.getServletContext().setAttribute("emf",entityManagerFactory);
 
 
             String logFilePath;

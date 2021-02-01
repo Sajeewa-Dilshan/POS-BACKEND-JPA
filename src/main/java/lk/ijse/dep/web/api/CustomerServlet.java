@@ -122,6 +122,7 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        System.out.println("recieved the request");
         Jsonb jsonb = JsonbBuilder.create();
 
         final EntityManagerFactory emf = (EntityManagerFactory) getServletContext().getAttribute("emf");
